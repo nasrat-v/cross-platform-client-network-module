@@ -23,13 +23,14 @@ public:
 
 	typedef struct		s_serverParam
 	{
-		PCSTR			hostName; // ex: chat.freenode.net
-		PCSTR			serviceName; // ex: http
-		short			port; // ex: 6667
-		int				ipType; // ex:: AF_INET for IPV4 or AF_INET6 for IPV6
-		int				socketType; // ex: SOCK_STREAM
-		IPPROTO			protocol; // ex: IPPROTO_TCP for TCP protocol
-		const char		*endCharSrv; // end character when sending msg, ex: for IRC \r\n
+		PCSTR			ipAddr; // ip address of server, if NULL set hostname - ex: 127.0.0.1 - can be NULL if hostName != NULL - priority if both are set
+		PCSTR			hostName; // hostname of server only if ip address is unknown - ex: chat.freenode.net - can be NULL if ipAddr != NULL
+		PCSTR			serviceName; // only if hostname is set - ex: http - can be NULL
+		short			port; // port of server - ex: 6667 - can't be NULL
+		int				ipType; // ip type used by server - ex:: AF_INET for IPV4 or AF_INET6 for IPV6 - can't be NULL
+		int				socketType; // socket type used by server - ex: SOCK_STREAM - can't be NULL
+		IPPROTO			protocol; // ip protocol used by server - ex: IPPROTO_TCP for TCP protocol - can't be NULL
+		const char		*endCharSrv; // end character when sending msg - ex: \r\n for IRC - can be NULL
 	}					t_serverParam;
 
 	ERR					initNetworkClient(const t_serverParam &srvParam);
@@ -52,7 +53,8 @@ private:
 
 	/* Methods */
 	ERR					initSocket();
-	void				initHandleSocket();
+	ERR					initHandleSocketWithIpAddress();
+	void				initHandleSocketWithHostname();
 	ERR					findIpAddrWithHostname();
 };
 
