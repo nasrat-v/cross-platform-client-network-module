@@ -4,7 +4,6 @@
 * nasrat_v
 */
 
-
 #include "Communicate.hh"
 
 Communicate::Communicate()
