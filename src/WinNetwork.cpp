@@ -25,7 +25,27 @@ ERR WinNetwork::initSocket()
 	return (SUCCESS);
 }
 
-void WinNetwork::initHandleSocket()
+ERR WinNetwork::initHandleSocketWithIpAddress()
+{
+	ULONG binaryIpAddress = 0;
+	SOCKADDR_IN sin;
+
+	memset(&_sins, 0, sizeof(_sins));
+	memset(&sin, 0, sizeof(sin));
+	sin.sin_family = _srvParam.ipType;
+	sin.sin_port = htons(_srvParam.port);
+	if (InetPtonA(_srvParam.ipType, _srvParam.ipAddr, &binaryIpAddress) != 1)
+	{
+		std::cout << "Error when initialize socket, invalid param: " << WSAGetLastError() << std::endl;
+		return (NET_ERROR);
+	}
+	sin.sin_addr.s_addr = binaryIpAddress;
+	_sins.push_back(sin);
+	std::cout << "Successfully initialize socket handle with ip address" << std::endl;
+	return (SUCCESS);
+}
+
+void WinNetwork::initHandleSocketWithHostname()
 {
 	int i = 0;
 	SOCKADDR_IN sin;
@@ -34,6 +54,7 @@ void WinNetwork::initHandleSocket()
 	memset(&_sins, 0, sizeof(_sins));
 	for (p = _addrInfo; p != NULL; p = p->ai_next)
 	{
+		memset(&sin, 0, sizeof(sin));
 		sin = *(reinterpret_cast<SOCKADDR_IN*>(p->ai_addr));
 		sin.sin_port = htons(_srvParam.port);
 		_sins.push_back(sin);
@@ -42,7 +63,7 @@ void WinNetwork::initHandleSocket()
 	std::cout << i << " ip address found" << std::endl;
 	if (_addrInfo != NULL)
 		freeaddrinfo(_addrInfo);
-	std::cout << "Successfully initialize socket handle" << std::endl;
+	std::cout << "Successfully initialize socket handle with hostname" << std::endl;
 }
 
 ERR WinNetwork::findIpAddrWithHostname()
@@ -66,10 +87,21 @@ ERR WinNetwork::findIpAddrWithHostname()
 ERR WinNetwork::initNetworkClient(const t_serverParam &srvParam)
 {
 	_srvParam = srvParam;
+	_sins.clear();
 	std::cout << "Server param received" << std::endl << "Launch initialization of the client..." << std::endl << std::endl;
-	if (findIpAddrWithHostname() == NET_ERROR)
-		return(NET_ERROR);
-	initHandleSocket();
+	if (_srvParam.ipAddr != NULL)
+		initHandleSocketWithIpAddress();
+	else if (_srvParam.hostName != NULL)
+	{
+		if (findIpAddrWithHostname() == NET_ERROR)
+			return(NET_ERROR);
+		initHandleSocketWithHostname();
+	}
+	else
+	{
+		std::cout << "Bad param - no ip address or hostname set" << std::endl;
+		return (NET_ERROR);
+	}
 	if (initSocket() == NET_ERROR)
 		return (NET_ERROR);
 	return (SUCCESS);
@@ -77,13 +109,15 @@ ERR WinNetwork::initNetworkClient(const t_serverParam &srvParam)
 
 ERR WinNetwork::connectToServer()
 {
-	char hosts[SIZE_BUFF];
+	char hostsIp[SIZE_BUFF] = { 0 };
 	std::string connectionData;
 
 	for (SOCKADDR_IN &sin : _sins)
 	{
-		InetNtopA(sin.sin_family, &sin.sin_addr, hosts, SIZE_BUFF);
-		std::cout << std::endl << "Trying to connect to server " << hosts << ':' << sin.sin_port << std::endl;
+		if (InetNtopA(sin.sin_family, &sin.sin_addr, hostsIp, SIZE_BUFF) == NULL)
+			std::cout << "Warning ! error when parsing ip server" << std::endl;
+		else
+			std::cout << std::endl << "Trying to connect to server " << hostsIp << ':' << sin.sin_port << std::endl;
 		if (connect(_sock, (SOCKADDR*)&sin, sizeof(SOCKADDR)) != SOCKET_ERROR)
 		{
 			std::cout << "Successfully connect to server" << std::endl << std::endl;
@@ -97,7 +131,7 @@ ERR WinNetwork::connectToServer()
 
 void WinNetwork::deconnectToServer()
 {
-	char error_code[SIZE_BUFF];
+	char error_code[SIZE_BUFF] = { 0 };
 	int error_code_size = sizeof(error_code);
 	int status;
 
@@ -119,15 +153,14 @@ void WinNetwork::deconnectToServer()
 ERR WinNetwork::readData(std::string &data)
 {
 	int ret;
-	char buff[(SIZE_BUFF + sizeof(char))];
+	char buff[(SIZE_BUFF + sizeof(char))] = { 0 };
 
-	memset(buff, 0, (SIZE_BUFF + sizeof(char)));
 	if ((ret = recv(_sock, buff, SIZE_BUFF, 0)) == SOCKET_ERROR)
 	{
 		std::cerr << "Error failed to read data from socket" << std::endl;
 		return (NET_ERROR);
 	}
-	buff[ret] = '\0';
+	buff[ret] = '\0'; // to be sure
 	data = std::string(buff);
 	return (SUCCESS);
 }
