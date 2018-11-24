@@ -2,11 +2,11 @@
 
 #include "WinNetwork.hh"
 
-# define PORT				6667
-# define HOSTNAME			"chat.freenode.net"
-# define NICKNAME			"nick toto"
-# define USERNAME			"user toto  8 * :toto"
-# define END_CHAR_SRV		"\r\n"
+# define PORT		6667
+# define HOSTNAME	"chat.freenode.net"
+# define NICKNAME	"nick toto"
+# define USERNAME	"user toto  8 * :toto"
+# define END_CHAR_SRV	"\r\n"
 
 class Communicate
 {
@@ -15,7 +15,7 @@ public:
 	~Communicate();
 
 	void		communicateWithIRCServer();
-	ERR			initIRCClient();
+	ERR		initIRCClient();
 
 private:
 	/* Attributes */
