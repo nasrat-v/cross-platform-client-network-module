@@ -8,7 +8,10 @@ But you can connect and deconnect from multiple server with the same object.
 A structure "t_serverParam" allows you to send all configuration needed for the communication with the server.
 
 #### Ip address and Hostname
-If the Ip Address of the server is unknwown, you can use a hostname.
+If the Ip Address of the server is unknwown, you can use a Hostname.
 
 ## Sample
 This repository present a sample folder with an exemple of how using the WinNetwork class with an IRC Server.
+
+## To Do
+Multiple client with one object
