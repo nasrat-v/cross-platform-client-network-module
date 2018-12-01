@@ -2,8 +2,8 @@
 
 #include "ClientNetwork_Windows_SSL.hh"
 
-# define PORT				443
-# define HOSTNAME			"api.telegram.org"
+# define PORT			443
+# define HOSTNAME		"api.telegram.org"
 # define END_CHAR_SRV		"\r\n\r\n"
 
 class HttpsCommunication
@@ -13,7 +13,7 @@ public:
 	~HttpsCommunication();
 
 	void		communicate();
-	ERR			initHttpsClient();
+	ERR		initHttpsClient();
 
 private:
 	/* Attributes */
