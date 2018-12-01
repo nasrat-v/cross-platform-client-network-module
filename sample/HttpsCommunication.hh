@@ -12,7 +12,7 @@ public:
 	HttpsCommunication();
 	~HttpsCommunication();
 
-	void		communicate();
+	ERR		communicate();
 	ERR		initHttpsClient();
 
 private:
