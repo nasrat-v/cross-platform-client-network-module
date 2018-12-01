@@ -12,22 +12,22 @@ public:
 	ClientNetwork_Windows_SSL();
 	~ClientNetwork_Windows_SSL();
 
-	ERR					initNetworkClient(const t_serverParam &srvParam);
-	ERR					connectToServer();
-	void				deconnectToServer();
-	ERR					readData(std::string &data);
-	ERR					writeData(const std::string &data);
+	ERR			initNetworkClient(const t_serverParam &srvParam);
+	ERR			connectToServer();
+	void			deconnectToServer();
+	ERR			readData(std::string &data);
+	ERR			writeData(const std::string &data);
 
 private:
 	/* Attributes */
 	const SSL_METHOD	*_ssl_meth;
-	SSL_CTX				*_ssl_ctx;
-	SSL					*_ssl;
+	SSL_CTX			*_ssl_ctx;
+	SSL			*_ssl;
 
 	/* Methods */
-	void				initSSLLibrary();
-	ERR					initSSLConnection();
-	ERR					attachSSLToSocket();
-	ERR					connectSSLToServer();
+	void			initSSLLibrary();
+	ERR			initSSLConnection();
+	ERR			attachSSLToSocket();
+	ERR			connectSSLToServer();
 };
 
