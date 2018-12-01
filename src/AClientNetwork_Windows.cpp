@@ -162,7 +162,7 @@ ERR AClientNetwork_Windows::readData(std::string &data)
 	}
 	buff[ret] = '\0'; // to be sure
 	data = std::string(buff);
-	std::cout << "Received: " << std::endl << data << std::endl << ":From Server" << std::endl;
+	std::cout << "Received: " << std::endl << data << std::endl << ":From Server" << std::endl << std::endl;
 	return (SUCCESS);
 }
 
@@ -176,7 +176,7 @@ ERR AClientNetwork_Windows::writeData(const std::string &data)
 		std::cerr << "Error failed to write data to socket" << std::endl;
 		return (NET_ERROR);
 	}
-	std::cout << "Send:" << std::endl << data << std::endl << ":To server" << std::endl;
+	std::cout << "Send:" << std::endl << data << std::endl << ":To server" << std::endl << std::endl;
 	return (SUCCESS);
 }
 
