@@ -8,19 +8,18 @@ public:
 	AClientNetwork_Linux();
 	virtual ~AClientNetwork_Linux();
 
-	ERR					initNetworkClient(const t_serverParam &srvParam);
-	ERR					connectToServer();
-	void				deconnectToServer();
-	ERR					readData(std::string &data);
-	ERR					writeData(const std::string &data);
-	bool				isDataToRead();
-	void				clearSocket();
+	ERR	initNetworkClient(const t_serverParam &srvParam);
+	ERR	connectToServer();
+	void	deconnectToServer();
+	ERR	readData(std::string &data);
+	ERR	writeData(const std::string &data);
+	bool	isDataToRead();
+	void	clearSocket();
 
 protected:
-	/* Methods */
-	ERR					initSocket();
-	ERR					initHandleSocketWithIpAddress();
-	void				initHandleSocketWithHostname();
-	ERR					findIpAddrWithHostname();
+	ERR	initSocket();
+	ERR	initHandleSocketWithIpAddress();
+	void	initHandleSocketWithHostname();
+	ERR	findIpAddrWithHostname();
 };
 
