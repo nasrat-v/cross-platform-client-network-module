@@ -12,11 +12,11 @@ public:
 	ClientNetwork_Windows_SSL();
 	~ClientNetwork_Windows_SSL();
 
-	ERR			initNetworkClient(const t_serverParam &srvParam);
-	ERR			connectToServer();
-	void			deconnectToServer();
-	ERR			readData(std::string &data);
-	ERR			writeData(const std::string &data);
+	ERR			initNetworkClient(const t_serverParam &srvParam); // override
+	ERR			connectToServer(); // override
+	void			deconnectToServer(); // override
+	ERR			readData(std::string &data); // override
+	ERR			writeData(const std::string &data); // override
 
 private:
 	/* Attributes */
