@@ -1,17 +1,8 @@
-# windows-socket-class
-A network class with win32 socket to implement in all client network project
+# client-network-interface
+This repository contain a very simple Interface.
+And two Abstract class who inherit from this Interface, one for Linux and one for Windows.
+Allowing you to implement efficient network class in c++17 in all your project.
 
-## Src
-The source folder contain the WinNetwork class.
-This class can be used to initialize only one client.
-But you can connect and deconnect from multiple server with the same object.
-A structure "t_serverParam" allows you to send all configuration needed for the communication with the server.
+### Samples
+In this folder you can find an exemple of an SSL implementation of this interface and abstract class for windows to communicate with HTTPS server.
 
-#### Ip address and Hostname
-If the Ip Address of the server is unknwown, you can use a Hostname.
-
-## Sample
-This repository present a sample folder with an exemple of how using the WinNetwork class with an IRC Server.
-
-## To Do
-Multiple client with one object
