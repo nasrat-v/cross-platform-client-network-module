@@ -51,7 +51,7 @@ ERR ClientNetwork_Windows_SSL::readData(std::string & data)
 	}
 	buff[ret] = '\0'; // to be sure
 	data = std::string(buff);
-	std::cout << "Received: " << std::endl << data << std::endl << ":From Server" << std::endl;
+	std::cout << "Received: " << std::endl << data << std::endl << ":From Server" << std::endl << std::endl;
 	return (SUCCESS);
 }
 
