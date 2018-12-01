@@ -2,9 +2,9 @@
 
 #include "ClientNetwork_Windows_SSL.hh"
 
-# define PORT			443
-# define HOSTNAME		"api.telegram.org"
-# define END_CHAR_SRV		"\r\n\r\n"
+# define PORT		443
+# define HOSTNAME	"www.google.com"
+# define END_CHAR_SRV	"\r\n\r\n"
 
 class HttpsCommunication
 {
