@@ -1,9 +1,7 @@
 
 #include "ClientNetwork_Windows_SSL.hh"
 
-ClientNetwork_Windows_SSL::ClientNetwork_Windows_SSL()
-{
-}
+ClientNetwork_Windows_SSL::ClientNetwork_Windows_SSL() = default;
 
 ClientNetwork_Windows_SSL::~ClientNetwork_Windows_SSL()
 {
