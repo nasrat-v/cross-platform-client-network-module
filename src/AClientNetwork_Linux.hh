@@ -1,4 +1,6 @@
-#pragma once
+
+#ifndef __ACLIENTNETWORK_LINUX__
+#define __ACLIENTNETWORK_LINUX__
 
 #include "IClientNetwork.hh"
 
@@ -23,3 +25,4 @@ protected:
 	ERR	findIpAddrWithHostname();
 };
 
+#endif /* !__ACLIENTNETWORK_LINUX__ */
