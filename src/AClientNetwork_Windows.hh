@@ -10,19 +10,18 @@ public:
 	AClientNetwork_Windows();
 	virtual ~AClientNetwork_Windows();
 
-	ERR					initNetworkClient(const t_serverParam &srvParam);
-	ERR					connectToServer();
-	void				deconnectToServer();
-	ERR					readData(std::string &data);
-	ERR					writeData(const std::string &data);
-	bool				isDataToRead();
+	ERR	initNetworkClient(const t_serverParam &srvParam);
+	ERR	connectToServer();
+	void	deconnectToServer();
+	ERR	readData(std::string &data);
+	ERR	writeData(const std::string &data);
+	bool	isDataToRead();
 
 protected:
-	/* Methods */
-	ERR					initSocket();
-	ERR					initHandleSocketWithIpAddress();
-	void				initHandleSocketWithHostname();
-	ERR					findIpAddrWithHostname();
-	void				clearSocket();
+	ERR	initSocket();
+	ERR	initHandleSocketWithIpAddress();
+	void	initHandleSocketWithHostname();
+	ERR	findIpAddrWithHostname();
+	void	clearSocket();
 };
 
