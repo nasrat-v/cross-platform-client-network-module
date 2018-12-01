@@ -12,9 +12,9 @@ public:
 	ClientNetwork_Windows_SSL();
 	~ClientNetwork_Windows_SSL();
 
-	ERR			initNetworkClient(const t_serverParam &srvParam); // override
-	ERR			connectToServer(); // override
-	void			deconnectToServer(); // override
+	ERR			initNetworkClient(const t_serverParam &srvParam); // override -> add init SSL
+	ERR			connectToServer(); // override -> add connect SSL
+	void			deconnectToServer(); // override -> add SLL_shutdown & SSL_free
 	ERR			readData(std::string &data); // override -> just change recv by SSL_read
 	ERR			writeData(const std::string &data); // override -> just change send by SSL_write
 
