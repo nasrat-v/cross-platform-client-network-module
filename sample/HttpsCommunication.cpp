@@ -34,12 +34,14 @@ const ClientNetwork_Windows_SSL::t_serverParam HttpsCommunication::initConfigura
 	return (srvParam);
 }
 
-void HttpsCommunication::communicate()
+ERR HttpsCommunication::communicate()
 {
 	std::string data;
 
-	_network.connectToServer();
-	_network.writeData("GET / HTTP/1.1\r\nHost: " + std::string(HOSTNAME));
+	if (_network.connectToServer() == NET_ERROR)
+		return (NET_ERROR);
+	if (_network.writeData("GET / HTTP/1.1\r\nHost: " + std::string(HOSTNAME)) == NET_ERROR)
+		return (NET_ERROR);
 	while (42)
 	{
 		if (_network.isDataToRead())
@@ -51,8 +53,10 @@ int main()
 {
 	HttpsCommunication httpsCom;
 
-	httpsCom.initHttpsClient();
-	httpsCom.communicate();
+	if (httpsCom.initHttpsClient() == NET_ERROR)
+		return (1);
+	if (httpsCom.communicate() == NET_ERROR)
+		return (1);
 	return (0);
 }
 
