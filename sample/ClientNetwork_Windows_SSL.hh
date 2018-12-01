@@ -15,8 +15,8 @@ public:
 	ERR			initNetworkClient(const t_serverParam &srvParam); // override
 	ERR			connectToServer(); // override
 	void			deconnectToServer(); // override
-	ERR			readData(std::string &data); // override
-	ERR			writeData(const std::string &data); // override
+	ERR			readData(std::string &data); // override -> just change recv by SSL_read
+	ERR			writeData(const std::string &data); // override -> just change send by SSL_write
 
 private:
 	/* Attributes */
