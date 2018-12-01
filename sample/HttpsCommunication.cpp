@@ -40,8 +40,11 @@ void HttpsCommunication::communicate()
 
 	_network.connectToServer();
 	_network.writeData("GET / HTTP/1.1\r\nHost: " + std::string(HOSTNAME));
-	if (_network.isDataToRead())
-		_network.readData(data);
+	while (42)
+	{
+		if (_network.isDataToRead())
+			_network.readData(data);
+	}
 }
 
 int main()
