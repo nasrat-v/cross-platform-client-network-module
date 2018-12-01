@@ -39,8 +39,7 @@ void HttpsCommunication::communicate()
 	std::string data;
 
 	_network.connectToServer();
-	_network.writeData("GET / HTTP/1.1\r\nHost: www.google.com");
-	//_network.writeData("GET /bot735059832:AAFIjSGNKHnDL6K5eXUDLDMznd92h4sMQ6E/getMe HTTP/1.1\r\nHost: api.telegram.org");
+	_network.writeData("GET / HTTP/1.1\r\nHost: " + std::string(HOSTNAME));
 	if (_network.isDataToRead())
 		_network.readData(data);
 }
