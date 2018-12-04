@@ -10,3 +10,5 @@ Allowing you to implement efficient network client class in c++17 in all your pr
 In this folder you can find an exemple of an SSL inheritage of the module.
 And an exemple of implementation to communicate with an HTTPS server.
 
+#### To Do
+Implement Linux abstract class
