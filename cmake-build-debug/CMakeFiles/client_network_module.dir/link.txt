@@ -1,0 +1,1 @@
+/usr/bin/c++   -W -Wall -Wextra -Wundef -Wpointer-arith -Wcast-align -Wcast-qual -Wunreachable-code -g   CMakeFiles/client_network_module.dir/src/ClientNetwork.cpp.o CMakeFiles/client_network_module.dir/src/Log.cpp.o CMakeFiles/client_network_module.dir/src/Connection.cpp.o CMakeFiles/client_network_module.dir/src/main.cpp.o  -o client_network_module 
