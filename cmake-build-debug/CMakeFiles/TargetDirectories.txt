@@ -1,0 +1,3 @@
+/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles/client_network_module.dir
+/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles/edit_cache.dir
