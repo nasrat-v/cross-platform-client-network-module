@@ -83,46 +83,46 @@ CMakeFiles/client_network_module.dir/src/Log.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client_network_module.dir/src/Log.cpp.s"
 	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nasrat_v/Dev/client-network-module/src/Log.cpp -o CMakeFiles/client_network_module.dir/src/Log.cpp.s
 
-CMakeFiles/client_network_module.dir/src/Connection.cpp.o: CMakeFiles/client_network_module.dir/flags.make
-CMakeFiles/client_network_module.dir/src/Connection.cpp.o: ../src/Connection.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client_network_module.dir/src/Connection.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client_network_module.dir/src/Connection.cpp.o -c /home/nasrat_v/Dev/client-network-module/src/Connection.cpp
+CMakeFiles/client_network_module.dir/sample/Communication.cpp.o: CMakeFiles/client_network_module.dir/flags.make
+CMakeFiles/client_network_module.dir/sample/Communication.cpp.o: ../sample/Communication.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/client_network_module.dir/sample/Communication.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client_network_module.dir/sample/Communication.cpp.o -c /home/nasrat_v/Dev/client-network-module/sample/Communication.cpp
 
-CMakeFiles/client_network_module.dir/src/Connection.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client_network_module.dir/src/Connection.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nasrat_v/Dev/client-network-module/src/Connection.cpp > CMakeFiles/client_network_module.dir/src/Connection.cpp.i
+CMakeFiles/client_network_module.dir/sample/Communication.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client_network_module.dir/sample/Communication.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nasrat_v/Dev/client-network-module/sample/Communication.cpp > CMakeFiles/client_network_module.dir/sample/Communication.cpp.i
 
-CMakeFiles/client_network_module.dir/src/Connection.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client_network_module.dir/src/Connection.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nasrat_v/Dev/client-network-module/src/Connection.cpp -o CMakeFiles/client_network_module.dir/src/Connection.cpp.s
+CMakeFiles/client_network_module.dir/sample/Communication.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client_network_module.dir/sample/Communication.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nasrat_v/Dev/client-network-module/sample/Communication.cpp -o CMakeFiles/client_network_module.dir/sample/Communication.cpp.s
 
-CMakeFiles/client_network_module.dir/src/main.cpp.o: CMakeFiles/client_network_module.dir/flags.make
-CMakeFiles/client_network_module.dir/src/main.cpp.o: ../src/main.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client_network_module.dir/src/main.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client_network_module.dir/src/main.cpp.o -c /home/nasrat_v/Dev/client-network-module/src/main.cpp
+CMakeFiles/client_network_module.dir/sample/main.cpp.o: CMakeFiles/client_network_module.dir/flags.make
+CMakeFiles/client_network_module.dir/sample/main.cpp.o: ../sample/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/client_network_module.dir/sample/main.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/client_network_module.dir/sample/main.cpp.o -c /home/nasrat_v/Dev/client-network-module/sample/main.cpp
 
-CMakeFiles/client_network_module.dir/src/main.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client_network_module.dir/src/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nasrat_v/Dev/client-network-module/src/main.cpp > CMakeFiles/client_network_module.dir/src/main.cpp.i
+CMakeFiles/client_network_module.dir/sample/main.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/client_network_module.dir/sample/main.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/nasrat_v/Dev/client-network-module/sample/main.cpp > CMakeFiles/client_network_module.dir/sample/main.cpp.i
 
-CMakeFiles/client_network_module.dir/src/main.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client_network_module.dir/src/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nasrat_v/Dev/client-network-module/src/main.cpp -o CMakeFiles/client_network_module.dir/src/main.cpp.s
+CMakeFiles/client_network_module.dir/sample/main.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/client_network_module.dir/sample/main.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/nasrat_v/Dev/client-network-module/sample/main.cpp -o CMakeFiles/client_network_module.dir/sample/main.cpp.s
 
 # Object files for target client_network_module
 client_network_module_OBJECTS = \
 "CMakeFiles/client_network_module.dir/src/ClientNetwork.cpp.o" \
 "CMakeFiles/client_network_module.dir/src/Log.cpp.o" \
-"CMakeFiles/client_network_module.dir/src/Connection.cpp.o" \
-"CMakeFiles/client_network_module.dir/src/main.cpp.o"
+"CMakeFiles/client_network_module.dir/sample/Communication.cpp.o" \
+"CMakeFiles/client_network_module.dir/sample/main.cpp.o"
 
 # External object files for target client_network_module
 client_network_module_EXTERNAL_OBJECTS =
 
 client_network_module: CMakeFiles/client_network_module.dir/src/ClientNetwork.cpp.o
 client_network_module: CMakeFiles/client_network_module.dir/src/Log.cpp.o
-client_network_module: CMakeFiles/client_network_module.dir/src/Connection.cpp.o
-client_network_module: CMakeFiles/client_network_module.dir/src/main.cpp.o
+client_network_module: CMakeFiles/client_network_module.dir/sample/Communication.cpp.o
+client_network_module: CMakeFiles/client_network_module.dir/sample/main.cpp.o
 client_network_module: CMakeFiles/client_network_module.dir/build.make
 client_network_module: CMakeFiles/client_network_module.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/nasrat_v/Dev/client-network-module/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable client_network_module"

@@ -12,18 +12,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d56db705-1d6b-462d-9c8b-4a403a1f0bbc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/ClientNetwork.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Connection.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Connection.hh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.hh" beforeDir="false" afterPath="$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/HttpsCommunication.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/sample/HttpsCommunication.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/sample/HttpsCommunication.hh" beforeDir="false" afterPath="$PROJECT_DIR$/sample/HttpsCommunication.hh" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AClientNetwork_Linux.cpp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AClientNetwork_Linux.hh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AClientNetwork_Windows.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientNetwork.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/AClientNetwork_Windows.hh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/IClientNetwork.hh" beforeDir="false" afterPath="$PROJECT_DIR$/src/IClientNetwork.hh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/DependInfo.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/DependInfo.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/build.make" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/build.make" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/cmake_clean.cmake" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/cmake_clean.cmake" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/link.txt" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/client_network_module.dir/link.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Makefile" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/Makefile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/client_network_module.cbp" beforeDir="false" afterPath="$PROJECT_DIR$/cmake-build-debug/client_network_module.cbp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientNetwork.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientNetwork.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/ClientNetwork.hh" beforeDir="false" afterPath="$PROJECT_DIR$/src/ClientNetwork.hh" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/cmake-build-debug/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -34,42 +30,12 @@
   </component>
   <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
   <component name="FileEditorManager">
-    <leaf>
-      <file pinned="false" current-in-tab="false">
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/ClientNetwork.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-2878">
-              <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-              <folding>
-                <element signature="e#147#402#0" expanded="true" />
-                <element signature="e#2588#2599#0" expanded="true" />
-                <element signature="e#4142#4329#0" expanded="true" />
-                <element signature="e#4474#4484#0" expanded="true" />
-                <element signature="e#6123#6217#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.cpp">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.hh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/sample/HttpsCommunication.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="516">
-              <caret line="37" selection-start-line="37" selection-end-line="52" selection-end-column="1" />
+            <state relative-caret-position="692">
+              <caret line="246" column="70" selection-start-line="246" selection-start-column="70" selection-end-line="246" selection-end-column="70" />
             </state>
           </provider>
         </entry>
@@ -77,8 +43,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Log.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="238">
-              <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+            <state relative-caret-position="289">
+              <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
             </state>
           </provider>
         </entry>
@@ -87,7 +53,7 @@
         <entry file="file://$PROJECT_DIR$/src/Log.cpp">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="510">
-              <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
+              <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -95,45 +61,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ClientNetwork.hh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-957">
-              <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+            <state relative-caret-position="102">
+              <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
               <folding>
-                <element signature="e#71#132#0" expanded="true" />
                 <element signature="e#151#173#0" expanded="true" />
-                <element signature="e#313#332#0" expanded="true" />
-                <element signature="e#452#766#0" expanded="true" />
-                <element signature="e#1251#1455#0" expanded="true" />
-                <element signature="e#1190#1291#0" expanded="true" />
-                <element signature="e#2830#2856#0" expanded="true" />
-                <element signature="e#3074#3113#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Connection.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Connection.hh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
             </state>
           </provider>
         </entry>
@@ -159,9 +91,9 @@
         <option value="$PROJECT_DIR$/src/Log.hh" />
         <option value="$PROJECT_DIR$/src/Log.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
-        <option value="$PROJECT_DIR$/src/ClientNetwork.cpp" />
-        <option value="$PROJECT_DIR$/src/ClientNetwork.hh" />
         <option value="$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.hh" />
+        <option value="$PROJECT_DIR$/src/ClientNetwork.hh" />
+        <option value="$PROJECT_DIR$/src/ClientNetwork.cpp" />
       </list>
     </option>
   </component>
@@ -250,20 +182,20 @@
       <workItem from="1551619036927" duration="32000" />
       <workItem from="1551619070001" duration="63000" />
       <workItem from="1551619133872" duration="10073000" />
+      <workItem from="1551970305832" duration="145000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10168000" />
+    <option name="totallyTimeSpent" value="10313000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1038" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25614974" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2593583" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" weight="0.32890365" />
-      <window_info anchor="bottom" id="CMake" weight="0.32890365" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" weight="0.32890365" />
@@ -275,6 +207,8 @@
       <window_info anchor="bottom" id="Version Control" order="8" />
       <window_info anchor="bottom" id="Terminal" order="9" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32890365" />
+      <window_info anchor="bottom" id="CMake" order="12" weight="0.32890365" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -285,44 +219,12 @@
     <option name="version" value="1" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/main.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Linux.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="32" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Linux.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-595">
-          <caret line="1" selection-start-line="1" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Windows.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="306">
-          <caret line="18" column="35" selection-start-line="18" selection-start-column="24" selection-end-line="18" selection-end-column="35" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Windows.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="561">
-          <caret line="156" column="19" selection-start-line="156" selection-start-column="8" selection-end-line="156" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/HttpsCommunication.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="408">
-          <caret line="24" column="41" selection-start-line="24" selection-start-column="41" selection-end-line="24" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/main.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Linux.hh" />
+    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Linux.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Windows.hh" />
+    <entry file="file://$PROJECT_DIR$/src/AClientNetwork_Windows.cpp" />
+    <entry file="file://$PROJECT_DIR$/sample/HttpsCommunication.hh" />
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -337,99 +239,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/IClientNetwork.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="27" lean-forward="true" selection-start-line="11" selection-start-column="27" selection-end-line="11" selection-end-column="27" />
-          <folding>
-            <element signature="e#71#132#0" expanded="true" />
-            <element signature="e#169#188#0" expanded="true" />
-            <element signature="e#1230#1331#0" expanded="true" />
-            <element signature="e#1881#1968#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Connection.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="24" selection-start-line="8" selection-start-column="24" selection-end-line="8" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/src/IClientNetwork.hh" />
+    <entry file="file://$PROJECT_DIR$/src/Connection.hh" />
+    <entry file="file://$PROJECT_DIR$/src/main.cpp" />
+    <entry file="file://$PROJECT_DIR$/src/Connection.cpp" />
+    <entry file="file://$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.cpp" />
+    <entry file="file://$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.hh" />
+    <entry file="file://$PROJECT_DIR$/sample/HttpsCommunication.cpp" />
     <entry file="file://$PROJECT_DIR$/src/Log.hh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="17" column="7" lean-forward="true" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
+        <state relative-caret-position="289">
+          <caret line="17" column="7" selection-start-line="17" selection-start-column="7" selection-end-line="17" selection-end-column="7" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Log.cpp">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="510">
-          <caret line="30" column="1" lean-forward="true" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="15" column="1" lean-forward="true" selection-start-line="15" selection-start-column="1" selection-end-line="15" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Connection.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="39" column="40" selection-start-line="39" selection-start-column="40" selection-end-line="39" selection-end-column="40" />
+          <caret line="30" column="1" selection-start-line="30" selection-start-column="1" selection-end-line="30" selection-end-column="1" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientNetwork.hh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-957">
-          <caret line="16" column="22" lean-forward="true" selection-start-line="16" selection-start-column="22" selection-end-line="16" selection-end-column="22" />
+        <state relative-caret-position="102">
+          <caret line="8" column="70" selection-start-line="8" selection-start-column="70" selection-end-line="8" selection-end-column="70" />
           <folding>
-            <element signature="e#71#132#0" expanded="true" />
             <element signature="e#151#173#0" expanded="true" />
-            <element signature="e#313#332#0" expanded="true" />
-            <element signature="e#452#766#0" expanded="true" />
-            <element signature="e#1251#1455#0" expanded="true" />
-            <element signature="e#1190#1291#0" expanded="true" />
-            <element signature="e#2830#2856#0" expanded="true" />
-            <element signature="e#3074#3113#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ClientNetwork.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2878">
-          <caret line="36" column="1" lean-forward="true" selection-start-line="36" selection-start-column="1" selection-end-line="36" selection-end-column="1" />
-          <folding>
-            <element signature="e#147#402#0" expanded="true" />
-            <element signature="e#2588#2599#0" expanded="true" />
-            <element signature="e#4142#4329#0" expanded="true" />
-            <element signature="e#4474#4484#0" expanded="true" />
-            <element signature="e#6123#6217#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.cpp">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/ClientNetwork_Windows_SSL.hh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="16" selection-start-line="16" selection-start-column="16" selection-end-line="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/sample/HttpsCommunication.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="516">
-          <caret line="37" selection-start-line="37" selection-end-line="52" selection-end-column="1" />
+        <state relative-caret-position="692">
+          <caret line="246" column="70" selection-start-line="246" selection-start-column="70" selection-end-line="246" selection-end-column="70" />
         </state>
       </provider>
     </entry>

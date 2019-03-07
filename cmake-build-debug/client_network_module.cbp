@@ -82,25 +82,25 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/Communication.cpp">
+			<Option target="client_network_module"/>
+		</Unit>
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/Communication.hh">
+			<Option target="client_network_module"/>
+		</Unit>
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/main.cpp">
+			<Option target="client_network_module"/>
+		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/ClientNetwork.cpp">
 			<Option target="client_network_module"/>
 		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/ClientNetwork.hh">
 			<Option target="client_network_module"/>
 		</Unit>
-		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/Connection.cpp">
-			<Option target="client_network_module"/>
-		</Unit>
-		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/Connection.hh">
-			<Option target="client_network_module"/>
-		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/Log.cpp">
 			<Option target="client_network_module"/>
 		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/Log.hh">
-			<Option target="client_network_module"/>
-		</Unit>
-		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/main.cpp">
 			<Option target="client_network_module"/>
 		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/CMakeLists.txt">

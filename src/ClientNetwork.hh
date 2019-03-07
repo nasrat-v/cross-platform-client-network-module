@@ -6,7 +6,7 @@
 	#include <winsock2.h>
 	#include <Ws2tcpip.h>
 	#include <io.h>
-#elif __linux__
+#elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
     #include <arpa/inet.h>
     #include <sys/select.h>
     #include <sys/socket.h>
@@ -30,7 +30,7 @@
     # define __read_socket(a, b, c, d)  recv(a, b, c, d)
     # define __write_socket(a, b, c, d) send(a, b, c, d)
     # define __close_socket             closesocket
-#elif __linux__
+#elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
 	# define __inetpton	                inet_pton
     # define __inetntop                 inet_ntop
     # define __getaddrinfo              getaddrinfo
@@ -50,7 +50,7 @@
     typedef SOCKET              __socket;
     typedef struct SOCKADDR     __sockaddr;
 	typedef struct SOCKADDR_IN  __sockaddr_in;
-#elif __linux__
+#elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
     typedef ssize_t             __ret;
     typedef size_t              __size;
     typedef socklen_t           __err_size;
@@ -76,7 +76,7 @@ public:
 		int				protocol; // ip protocol used by server - ex: IPPROTO_TCP for TCP protocol - can't be NULL
 #ifdef _WIN32
         int				ipType; // ip type used by server - ex:: AF_INET for IPV4 or AF_INET6 for IPV6 - can't be NULL
-#elif __linux__
+#elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
         sa_family_t     ipType; // ip type used by server - ex:: AF_INET for IPV4 or AF_INET6 for IPV6 - can't be NULL
 #endif
 	}					t_serverParam;

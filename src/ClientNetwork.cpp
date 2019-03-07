@@ -155,7 +155,7 @@ void ClientNetwork::deconnectToServer()
 			Log::logSuccessMsg("Socket already closed or never initialized");
 		else
 			Log::logFailureMsg("Error when closing socket: " + status);
-#elif __linux__
+#elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
 		Log::logFailureMsg("Error when closing socket");
 #endif
 	}
@@ -244,7 +244,7 @@ int ClientNetwork::logFailureMsg(const std::string &msg, bool errorCode)
 		Log::logFailureMsg(msg + WSAGetLastError());
 	else
 		Log::logFailureMsg(msg);
-#elif __linux__
+#elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
     Log::logFailureMsg(msg);
 #endif
 }
