@@ -123,6 +123,60 @@ client_network_module/fast:
 	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/build
 .PHONY : client_network_module/fast
 
+sample/Communication.o: sample/Communication.cpp.o
+
+.PHONY : sample/Communication.o
+
+# target to build an object file
+sample/Communication.cpp.o:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Communication.cpp.o
+.PHONY : sample/Communication.cpp.o
+
+sample/Communication.i: sample/Communication.cpp.i
+
+.PHONY : sample/Communication.i
+
+# target to preprocess a source file
+sample/Communication.cpp.i:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Communication.cpp.i
+.PHONY : sample/Communication.cpp.i
+
+sample/Communication.s: sample/Communication.cpp.s
+
+.PHONY : sample/Communication.s
+
+# target to generate assembly for a file
+sample/Communication.cpp.s:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Communication.cpp.s
+.PHONY : sample/Communication.cpp.s
+
+sample/main.o: sample/main.cpp.o
+
+.PHONY : sample/main.o
+
+# target to build an object file
+sample/main.cpp.o:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/main.cpp.o
+.PHONY : sample/main.cpp.o
+
+sample/main.i: sample/main.cpp.i
+
+.PHONY : sample/main.i
+
+# target to preprocess a source file
+sample/main.cpp.i:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/main.cpp.i
+.PHONY : sample/main.cpp.i
+
+sample/main.s: sample/main.cpp.s
+
+.PHONY : sample/main.s
+
+# target to generate assembly for a file
+sample/main.cpp.s:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/main.cpp.s
+.PHONY : sample/main.cpp.s
+
 src/ClientNetwork.o: src/ClientNetwork.cpp.o
 
 .PHONY : src/ClientNetwork.o
@@ -149,33 +203,6 @@ src/ClientNetwork.s: src/ClientNetwork.cpp.s
 src/ClientNetwork.cpp.s:
 	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/ClientNetwork.cpp.s
 .PHONY : src/ClientNetwork.cpp.s
-
-src/Connection.o: src/Connection.cpp.o
-
-.PHONY : src/Connection.o
-
-# target to build an object file
-src/Connection.cpp.o:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/Connection.cpp.o
-.PHONY : src/Connection.cpp.o
-
-src/Connection.i: src/Connection.cpp.i
-
-.PHONY : src/Connection.i
-
-# target to preprocess a source file
-src/Connection.cpp.i:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/Connection.cpp.i
-.PHONY : src/Connection.cpp.i
-
-src/Connection.s: src/Connection.cpp.s
-
-.PHONY : src/Connection.s
-
-# target to generate assembly for a file
-src/Connection.cpp.s:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/Connection.cpp.s
-.PHONY : src/Connection.cpp.s
 
 src/Log.o: src/Log.cpp.o
 
@@ -204,33 +231,6 @@ src/Log.cpp.s:
 	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/Log.cpp.s
 .PHONY : src/Log.cpp.s
 
-src/main.o: src/main.cpp.o
-
-.PHONY : src/main.o
-
-# target to build an object file
-src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/main.cpp.o
-.PHONY : src/main.cpp.o
-
-src/main.i: src/main.cpp.i
-
-.PHONY : src/main.i
-
-# target to preprocess a source file
-src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/main.cpp.i
-.PHONY : src/main.cpp.i
-
-src/main.s: src/main.cpp.s
-
-.PHONY : src/main.s
-
-# target to generate assembly for a file
-src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/main.cpp.s
-.PHONY : src/main.cpp.s
-
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -240,18 +240,18 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... client_network_module"
 	@echo "... edit_cache"
+	@echo "... sample/Communication.o"
+	@echo "... sample/Communication.i"
+	@echo "... sample/Communication.s"
+	@echo "... sample/main.o"
+	@echo "... sample/main.i"
+	@echo "... sample/main.s"
 	@echo "... src/ClientNetwork.o"
 	@echo "... src/ClientNetwork.i"
 	@echo "... src/ClientNetwork.s"
-	@echo "... src/Connection.o"
-	@echo "... src/Connection.i"
-	@echo "... src/Connection.s"
 	@echo "... src/Log.o"
 	@echo "... src/Log.i"
 	@echo "... src/Log.s"
-	@echo "... src/main.o"
-	@echo "... src/main.i"
-	@echo "... src/main.s"
 .PHONY : help
 
 
