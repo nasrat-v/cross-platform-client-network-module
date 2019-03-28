@@ -9,9 +9,9 @@
 # define FILE_ERROR			(ERR)~0
 # define LOGFILE_NAME		"log.txt"
 
-typedef short			ERR;
-static bool				_tryStatus = false;
-static std::fstream		_logFile;
+typedef short						ERR;
+__attribute__((unused))static bool	_tryStatus = false;
+static std::fstream					_logFile;
 
 class Log
 {

@@ -1,14 +1,14 @@
 
-#include "HttpsCommunication.hh"
+#include "HttpsConnection.hh"
 
-HttpsCommunication::HttpsCommunication() = default;
+HttpsConnection::HttpsConnection() = default;
 
-HttpsCommunication::~HttpsCommunication() = default;
+HttpsConnection::~HttpsConnection() = default;
 
-ERR HttpsCommunication::initHttpsClient()
+ERR HttpsConnection::initHttpsClient()
 {
 	int status;
-	ClientNetwork_Windows_SSL::t_serverParam srvParam;
+	ClientNetwork_SSL::t_serverParam srvParam;
 
 	srvParam = initConfigurationHttpsServer();
 	if (((status = _network.initNetworkClient(srvParam)) == NET_ERROR) || (status == SSL_NET_ERROR))
@@ -20,22 +20,22 @@ ERR HttpsCommunication::initHttpsClient()
 	return (SUCCESS);
 }
 
-const ClientNetwork_Windows_SSL::t_serverParam HttpsCommunication::initConfigurationHttpsServer()
+const ClientNetwork_SSL::t_serverParam HttpsConnection::initConfigurationHttpsServer()
 {
-	ClientNetwork_Windows_SSL::t_serverParam srvParam;
+	ClientNetwork_SSL::t_serverParam srvParam;
 
 	memset(&srvParam, 0, sizeof(srvParam));
 	srvParam.ipType = AF_INET;
 	srvParam.socketType = SOCK_STREAM;
 	srvParam.protocol = IPPROTO_TCP;
 	srvParam.hostName = HOSTNAME;
-	srvParam.serviceName = NULL;
-	srvParam.ipAddr = NULL;
+	srvParam.serviceName = nullptr;
+	srvParam.ipAddr = nullptr;
 	srvParam.port = PORT;
 	return (srvParam);
 }
 
-ERR HttpsCommunication::communicate(const std::string &message)
+ERR HttpsConnection::communicateWithHttpsServer(const std::string &message)
 {
 	std::string data;
 

@@ -123,32 +123,32 @@ client_network_module/fast:
 	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/build
 .PHONY : client_network_module/fast
 
-sample/Communication.o: sample/Communication.cpp.o
+sample/Connection.o: sample/Connection.cpp.o
 
-.PHONY : sample/Communication.o
+.PHONY : sample/Connection.o
 
 # target to build an object file
-sample/Communication.cpp.o:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Communication.cpp.o
-.PHONY : sample/Communication.cpp.o
+sample/Connection.cpp.o:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Connection.cpp.o
+.PHONY : sample/Connection.cpp.o
 
-sample/Communication.i: sample/Communication.cpp.i
+sample/Connection.i: sample/Connection.cpp.i
 
-.PHONY : sample/Communication.i
+.PHONY : sample/Connection.i
 
 # target to preprocess a source file
-sample/Communication.cpp.i:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Communication.cpp.i
-.PHONY : sample/Communication.cpp.i
+sample/Connection.cpp.i:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Connection.cpp.i
+.PHONY : sample/Connection.cpp.i
 
-sample/Communication.s: sample/Communication.cpp.s
+sample/Connection.s: sample/Connection.cpp.s
 
-.PHONY : sample/Communication.s
+.PHONY : sample/Connection.s
 
 # target to generate assembly for a file
-sample/Communication.cpp.s:
-	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Communication.cpp.s
-.PHONY : sample/Communication.cpp.s
+sample/Connection.cpp.s:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/Connection.cpp.s
+.PHONY : sample/Connection.cpp.s
 
 sample/main.o: sample/main.cpp.o
 
@@ -177,6 +177,33 @@ sample/main.cpp.s:
 	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/main.cpp.s
 .PHONY : sample/main.cpp.s
 
+sample/ssl_sample/HttpsConnection.o: sample/ssl_sample/HttpsConnection.cpp.o
+
+.PHONY : sample/ssl_sample/HttpsConnection.o
+
+# target to build an object file
+sample/ssl_sample/HttpsConnection.cpp.o:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/ssl_sample/HttpsConnection.cpp.o
+.PHONY : sample/ssl_sample/HttpsConnection.cpp.o
+
+sample/ssl_sample/HttpsConnection.i: sample/ssl_sample/HttpsConnection.cpp.i
+
+.PHONY : sample/ssl_sample/HttpsConnection.i
+
+# target to preprocess a source file
+sample/ssl_sample/HttpsConnection.cpp.i:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/ssl_sample/HttpsConnection.cpp.i
+.PHONY : sample/ssl_sample/HttpsConnection.cpp.i
+
+sample/ssl_sample/HttpsConnection.s: sample/ssl_sample/HttpsConnection.cpp.s
+
+.PHONY : sample/ssl_sample/HttpsConnection.s
+
+# target to generate assembly for a file
+sample/ssl_sample/HttpsConnection.cpp.s:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/sample/ssl_sample/HttpsConnection.cpp.s
+.PHONY : sample/ssl_sample/HttpsConnection.cpp.s
+
 src/ClientNetwork.o: src/ClientNetwork.cpp.o
 
 .PHONY : src/ClientNetwork.o
@@ -203,6 +230,33 @@ src/ClientNetwork.s: src/ClientNetwork.cpp.s
 src/ClientNetwork.cpp.s:
 	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/ClientNetwork.cpp.s
 .PHONY : src/ClientNetwork.cpp.s
+
+src/ClientNetwork_SSL.o: src/ClientNetwork_SSL.cpp.o
+
+.PHONY : src/ClientNetwork_SSL.o
+
+# target to build an object file
+src/ClientNetwork_SSL.cpp.o:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/ClientNetwork_SSL.cpp.o
+.PHONY : src/ClientNetwork_SSL.cpp.o
+
+src/ClientNetwork_SSL.i: src/ClientNetwork_SSL.cpp.i
+
+.PHONY : src/ClientNetwork_SSL.i
+
+# target to preprocess a source file
+src/ClientNetwork_SSL.cpp.i:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/ClientNetwork_SSL.cpp.i
+.PHONY : src/ClientNetwork_SSL.cpp.i
+
+src/ClientNetwork_SSL.s: src/ClientNetwork_SSL.cpp.s
+
+.PHONY : src/ClientNetwork_SSL.s
+
+# target to generate assembly for a file
+src/ClientNetwork_SSL.cpp.s:
+	$(MAKE) -f CMakeFiles/client_network_module.dir/build.make CMakeFiles/client_network_module.dir/src/ClientNetwork_SSL.cpp.s
+.PHONY : src/ClientNetwork_SSL.cpp.s
 
 src/Log.o: src/Log.cpp.o
 
@@ -240,15 +294,21 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... client_network_module"
 	@echo "... edit_cache"
-	@echo "... sample/Communication.o"
-	@echo "... sample/Communication.i"
-	@echo "... sample/Communication.s"
+	@echo "... sample/Connection.o"
+	@echo "... sample/Connection.i"
+	@echo "... sample/Connection.s"
 	@echo "... sample/main.o"
 	@echo "... sample/main.i"
 	@echo "... sample/main.s"
+	@echo "... sample/ssl_sample/HttpsConnection.o"
+	@echo "... sample/ssl_sample/HttpsConnection.i"
+	@echo "... sample/ssl_sample/HttpsConnection.s"
 	@echo "... src/ClientNetwork.o"
 	@echo "... src/ClientNetwork.i"
 	@echo "... src/ClientNetwork.s"
+	@echo "... src/ClientNetwork_SSL.o"
+	@echo "... src/ClientNetwork_SSL.i"
+	@echo "... src/ClientNetwork_SSL.s"
 	@echo "... src/Log.o"
 	@echo "... src/Log.i"
 	@echo "... src/Log.s"

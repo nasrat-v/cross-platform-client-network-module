@@ -38,8 +38,7 @@ ERR ClientNetwork::initHandleSocketWithIpAddress()
     __binary_iptype binaryIpAddress = 0;
 	__sockaddr_in sin;
 
-	memset(&_sins, 0, sizeof(_sins));
-	memset(&sin, 0, sizeof(sin));
+    memset(&sin, 0, sizeof(sin));
 	sin.sin_family = _srvParam.ipType;
 	sin.sin_port = htons(_srvParam.port);
 	if (__inetpton(_srvParam.ipType, _srvParam.ipAddr, &binaryIpAddress) != 1)
@@ -59,7 +58,6 @@ void ClientNetwork::initHandleSocketWithHostname()
     __sockaddr_in sin;
 	struct addrinfo *p;
 
-	memset(&_sins, 0, sizeof(_sins));
 	for (p = _addrInfo; p != nullptr; p = p->ai_next)
 	{
 		memset(&sin, 0, sizeof(sin));
@@ -145,7 +143,7 @@ void ClientNetwork::deconnectToServer()
 {
 	char error_code[SIZE_BUFF] = { 0 };
 	__err_size error_code_size = sizeof(error_code);
-	int status;
+	__attribute__((unused))int status;
 
 	Log::logTryMsg("Cleaning server connection...");
 	if (getsockopt(_sock, SOL_SOCKET, SO_ERROR, error_code, &error_code_size) == NET_ERROR)
@@ -237,7 +235,7 @@ void ClientNetwork::clearSocket()
 	Log::logSomething("Socket: " + std::to_string(_sock) + " cleared\n");
 }
 
-int ClientNetwork::logFailureMsg(const std::string &msg, bool errorCode)
+void ClientNetwork::logFailureMsg(const std::string &msg, __attribute__((unused))bool errorCode)
 {
 #ifdef _WIN32
 	if (errorCode)

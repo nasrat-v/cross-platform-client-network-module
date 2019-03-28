@@ -82,19 +82,31 @@
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/Communication.cpp">
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/Connection.cpp">
 			<Option target="client_network_module"/>
 		</Unit>
-		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/Communication.hh">
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/Connection.hh">
 			<Option target="client_network_module"/>
 		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/main.cpp">
+			<Option target="client_network_module"/>
+		</Unit>
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/ssl_sample/HttpsConnection.cpp">
+			<Option target="client_network_module"/>
+		</Unit>
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/sample/ssl_sample/HttpsConnection.hh">
 			<Option target="client_network_module"/>
 		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/ClientNetwork.cpp">
 			<Option target="client_network_module"/>
 		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/ClientNetwork.hh">
+			<Option target="client_network_module"/>
+		</Unit>
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/ClientNetwork_SSL.cpp">
+			<Option target="client_network_module"/>
+		</Unit>
+		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/ClientNetwork_SSL.hh">
 			<Option target="client_network_module"/>
 		</Unit>
 		<Unit filename="/home/nasrat_v/Dev/client-network-module/src/Log.cpp">

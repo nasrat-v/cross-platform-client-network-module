@@ -64,7 +64,7 @@ class ClientNetwork
 {
 public:
 	ClientNetwork();
-	~ClientNetwork();
+	virtual ~ClientNetwork();
 
     typedef struct		s_serverParam
 	{
@@ -81,13 +81,13 @@ public:
 #endif
 	}					t_serverParam;
 
-	ERR					initNetworkClient(const t_serverParam &srvParam);
-	ERR					connectToServer();
-	void				deconnectToServer();
-	ERR					readData(std::string &data);
-	ERR					writeData(const std::string &data);
-	bool				isDataToRead();
-	bool				isConnected() const;
+    virtual ERR			initNetworkClient(const t_serverParam &srvParam);
+	virtual ERR			connectToServer();
+	virtual void		deconnectToServer();
+	virtual ERR			readData(std::string &data);
+	virtual ERR			writeData(const std::string &data);
+	virtual bool		isDataToRead();
+	virtual bool		isConnected() const;
 
 protected:
 	/* Attributes */
@@ -111,7 +111,7 @@ protected:
 	void				initHandleSocketWithHostname();
 	ERR					findIpAddrWithHostname();
 	void				clearSocket();
-    int                 logFailureMsg(const std::string &msg, bool errorCode);
+    void                 logFailureMsg(const std::string &msg, bool errorCode);
 };
 
-#endif // !__CLIENTNETWORK__
+#endif /* !__CLIENTNETWORK__ */

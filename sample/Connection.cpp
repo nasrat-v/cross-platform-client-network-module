@@ -2,13 +2,13 @@
 // Created by nasrat_v on 3/3/19.
 //
 
-#include "Communication.hh"
+#include "Connection.hh"
 
 Connection::Connection() = default;
 
 Connection::~Connection() = default;
 
-ERR Connection::initHttpsClient()
+ERR Connection::initClient()
 {
     ClientNetwork::t_serverParam srvParam;
 
