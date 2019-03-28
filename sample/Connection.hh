@@ -25,6 +25,7 @@ private:
 
     /* Methods */
     const ClientNetwork::t_serverParam  initConfigurationServer();
+    void 							    resetString(std::string &str);
 };
 
 

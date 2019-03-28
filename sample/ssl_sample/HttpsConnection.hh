@@ -27,6 +27,7 @@ private:
 
 	/* Methods */
 	const ClientNetwork_SSL::t_serverParam	initConfigurationHttpsServer();
+	void 									resetString(std::string &str);
 };
 
 #endif /* !__HTTPSCONNECTION__ */

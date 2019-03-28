@@ -47,7 +47,15 @@ ERR HttpsConnection::communicateWithHttpsServer(const std::string &message)
 	while (_network.isConnected())
 	{
 		if (_network.isDataToRead())
+		{
 			_network.readData(data);
+			resetString(data);
+		}
 	}
 	return (SUCCESS);
+}
+
+void HttpsConnection::resetString(std::string &str)
+{
+	str = "";
 }

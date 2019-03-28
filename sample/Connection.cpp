@@ -48,7 +48,15 @@ ERR Connection::communicateWithServer(const std::string &msg)
     while (_network.isConnected())
     {
         if (_network.isDataToRead())
+        {
             _network.readData(data);
+            resetString(data);
+        }
     }
     return (SUCCESS);
+}
+
+void Connection::resetString(std::string &str)
+{
+    str = "";
 }
