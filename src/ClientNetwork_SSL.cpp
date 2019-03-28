@@ -3,16 +3,13 @@
 
 ClientNetwork_SSL::ClientNetwork_SSL() = default;
 
-ClientNetwork_SSL::~ClientNetwork_SSL()
-{
-	deconnectToServer();
-}
+ClientNetwork_SSL::~ClientNetwork_SSL() = default;
 
 ERR ClientNetwork_SSL::initNetworkClient(const t_serverParam & srvParam)
 {
 	if (ClientNetwork::initNetworkClient(srvParam) == NET_ERROR)
 		return (NET_ERROR);
-	Log::logInfoMsg("\nLaunch SSL initialization of the client...\n");
+	Log::logInfoMsg("Launch SSL initialization of the client...");
 	initSSLLibrary();
 	if (initSSLConnection() == SSL_NET_ERROR)
 		return (SSL_NET_ERROR);
@@ -33,10 +30,11 @@ ERR ClientNetwork_SSL::connectToServer()
 
 void ClientNetwork_SSL::deconnectToServer()
 {
-	Log::logInfoMsg("\nCleaning SSL server connection...");
+	Log::logInfoMsg("Cleaning SSL server connection...");
 	SSL_shutdown(_ssl);
 	SSL_free(_ssl);
 	Log::logSuccessMsg("Successfully shutdown SSL connection");
+	ClientNetwork::deconnectToServer();
 }
 
 ERR ClientNetwork_SSL::readData(std::string & data)
@@ -126,6 +124,6 @@ ERR ClientNetwork_SSL::connectSSLToServer()
 		Log::logFailureMsg("Error during SSL connection to server");
 		return (SSL_NET_ERROR);
 	}
-	Log::logSuccessMsg("Successfully connect SSL to server using cipher: " + std::string(SSL_get_cipher(_ssl)) + '\n');
+	Log::logSuccessMsg("Successfully connect SSL to server using cipher: " + std::string(SSL_get_cipher(_ssl)));
 	return (SUCCESS);
 }

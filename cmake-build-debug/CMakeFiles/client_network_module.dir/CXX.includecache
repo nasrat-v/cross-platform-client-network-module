@@ -6,26 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/home/nasrat_v/Dev/client-network-module/sample/Connection.cpp
-Connection.hh
-/home/nasrat_v/Dev/client-network-module/sample/Connection.hh
-
-/home/nasrat_v/Dev/client-network-module/sample/Connection.hh
-../src/ClientNetwork.hh
-/home/nasrat_v/Dev/client-network-module/src/ClientNetwork.hh
-
-/home/nasrat_v/Dev/client-network-module/sample/main.cpp
-ssl_sample/HttpsConnection.hh
-/home/nasrat_v/Dev/client-network-module/sample/ssl_sample/HttpsConnection.hh
-
-/home/nasrat_v/Dev/client-network-module/sample/ssl_sample/HttpsConnection.cpp
-HttpsConnection.hh
-/home/nasrat_v/Dev/client-network-module/sample/ssl_sample/HttpsConnection.hh
-
-/home/nasrat_v/Dev/client-network-module/sample/ssl_sample/HttpsConnection.hh
-../../src/ClientNetwork_SSL.hh
-/home/nasrat_v/Dev/client-network-module/src/ClientNetwork_SSL.hh
-
 /home/nasrat_v/Dev/client-network-module/src/ClientNetwork.hh
 winsock2.h
 -
@@ -57,6 +37,10 @@ vector
 -
 Log.hh
 /home/nasrat_v/Dev/client-network-module/src/Log.hh
+
+/home/nasrat_v/Dev/client-network-module/src/ClientNetwork_SSL.cpp
+ClientNetwork_SSL.hh
+/home/nasrat_v/Dev/client-network-module/src/ClientNetwork_SSL.hh
 
 /home/nasrat_v/Dev/client-network-module/src/ClientNetwork_SSL.hh
 openssl/ssl.h
