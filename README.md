@@ -1,6 +1,6 @@
 # client-network-module
 This project is a module to implement in all project who need a client network.
-It can handle SSL Connection.
+It can handle SSL Connection for HTTPS Communication.
 
 ## Class
 This branch contain a unique cross-platform class.
