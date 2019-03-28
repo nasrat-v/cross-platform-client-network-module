@@ -2,13 +2,13 @@
 // Created by nasrat_v on 3/3/19.
 //
 
-#include "Communication.hh"
+#include "Connection.hh"
 
 Connection::Connection() = default;
 
 Connection::~Connection() = default;
 
-ERR Connection::initHttpsClient()
+ERR Connection::initClient()
 {
     ClientNetwork::t_serverParam srvParam;
 
@@ -48,7 +48,15 @@ ERR Connection::communicateWithServer(const std::string &msg)
     while (_network.isConnected())
     {
         if (_network.isDataToRead())
+        {
             _network.readData(data);
+            resetString(data);
+        }
     }
     return (SUCCESS);
+}
+
+void Connection::resetString(std::string &str)
+{
+    str = "";
 }
