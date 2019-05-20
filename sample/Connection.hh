@@ -16,7 +16,7 @@ public:
     Connection();
     ~Connection();
 
-    ERR             initClient();
+    ERR             initClient(bool log);
     ERR             communicateWithServer(const std::string &msg);
 
 private:

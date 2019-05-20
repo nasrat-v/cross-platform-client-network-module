@@ -8,12 +8,8 @@ set(CMAKE_CXX_FLAGS
         "${CMAKE_CXX_FLAGS} -W -Wall -Wextra -Wundef -Wpointer-arith -Wcast-align -Wcast-qual -Wunreachable-code -L/usr/local/ssl/lib -lssl -lcrypto")
 
 set(SOURCE_FILES
-        src/ClientNetwork.hh
-        src/ClientNetwork.cpp
         src/ClientNetwork_SSL.hh
         src/ClientNetwork_SSL.cpp
-        src/Log.hh
-        src/Log.cpp
         sample/Connection.cpp
         sample/Connection.hh
         sample/ssl_sample/HttpsConnection.cpp

@@ -1,5 +1,5 @@
 
-#include "ClientNetwork.hh"
+#include "../../header/Network/ClientNetwork.hh"
 
 ClientNetwork::ClientNetwork()
 {
@@ -26,10 +26,10 @@ ERR ClientNetwork::initSocket()
 {
 	if ((_sock = socket(_srvParam.ipType, _srvParam.socketType, _srvParam.protocol)) == NET_ERROR)
 	{
-		Log::logFailureMsg("Error socket initialization");
+		LogNetwork::logFailureMsg("Error socket initialization");
 		return (NET_ERROR);
 	}
-	Log::logSuccessMsg("Successfully initialize socket: " + std::to_string(_sock));
+	LogNetwork::logSuccessMsg("Successfully initialize socket: " + std::to_string(_sock));
 	return (SUCCESS);
 }
 
@@ -38,7 +38,7 @@ ERR ClientNetwork::initHandleSocketWithIpAddress()
     __binary_iptype binaryIpAddress = 0;
 	__sockaddr_in sin;
 
-    memset(&sin, 0, sizeof(sin));
+	memset(&sin, 0, sizeof(sin));
 	sin.sin_family = _srvParam.ipType;
 	sin.sin_port = htons(_srvParam.port);
 	if (__inetpton(_srvParam.ipType, _srvParam.ipAddr, &binaryIpAddress) != 1)
@@ -48,7 +48,7 @@ ERR ClientNetwork::initHandleSocketWithIpAddress()
 	}
 	sin.sin_addr.s_addr = binaryIpAddress;
 	_sins.push_back(sin);
-	Log::logSuccessMsg("Successfully initialize socket handle with ip address");
+	LogNetwork::logSuccessMsg("Successfully initialize socket handle with ip address");
 	return (SUCCESS);
 }
 
@@ -66,10 +66,10 @@ void ClientNetwork::initHandleSocketWithHostname()
 		_sins.push_back(sin);
 		i++;
 	}
-	Log::logInfoMsg(std::to_string(i) + " ip address found");
+	LogNetwork::logInfoMsg(std::to_string(i) + " ip address found");
 	if (_addrInfo != nullptr)
 		freeaddrinfo(_addrInfo);
-	Log::logSuccessMsg("Successfully initialize socket handle with hostname");
+	LogNetwork::logSuccessMsg("Successfully initialize socket handle with hostname");
 }
 
 ERR ClientNetwork::findIpAddrWithHostname()
@@ -83,10 +83,10 @@ ERR ClientNetwork::findIpAddrWithHostname()
 	hints.ai_protocol = _srvParam.protocol;
 	if ((__getaddrinfo(_srvParam.hostName, _srvParam.serviceName, &hints, &_addrInfo) != 0) || (_addrInfo == nullptr))
 	{
-		Log::logFailureMsg("Error cannot retrieve ip address with hostname");
+		LogNetwork::logFailureMsg("Error cannot retrieve ip address with hostname");
 		return (NET_ERROR);
 	}
-	Log::logSuccessMsg("Successfully retrieve ip address of: " + std::string(_srvParam.hostName));
+	LogNetwork::logSuccessMsg("Successfully retrieve ip address of: " + std::string(_srvParam.hostName));
 	return (SUCCESS);
 }
 
@@ -97,7 +97,7 @@ ERR ClientNetwork::initNetworkClient(const t_serverParam &srvParam)
 #endif
 	_srvParam = srvParam;
 	_sins.clear();
-	Log::logSomething("Server param received\nLaunch initialization of the client...\n");
+	LogNetwork::logSomething("Server param received\nLaunch initialization of the client...\n");
 	if (_srvParam.ipAddr != nullptr)
 		initHandleSocketWithIpAddress();
 	else if (_srvParam.hostName != nullptr)
@@ -108,7 +108,7 @@ ERR ClientNetwork::initNetworkClient(const t_serverParam &srvParam)
 	}
 	else
 	{
-		Log::logFailureMsg("Bad param - no ip address or hostname set");
+		LogNetwork::logFailureMsg("Bad param - no ip address or hostname set");
 		return (NET_ERROR);
 	}
 	if (initSocket() == NET_ERROR)
@@ -124,18 +124,18 @@ ERR ClientNetwork::connectToServer()
 	for (__sockaddr_in &sin : _sins)
 	{
 		if (__inetntop(sin.sin_family, &sin.sin_addr, hostsIp, SIZE_BUFF) == nullptr)
-			Log::logSomething("\nWarning ! error when parsing ip server");
+			LogNetwork::logSomething("\nWarning ! error when parsing ip server");
 		else
-			Log::logSomething("\nTrying to connect to server " + std::string(hostsIp) + ':' + std::to_string(sin.sin_port));
+		    LogNetwork::logSomething("\nTrying to connect to server " + std::string(hostsIp) + ':' + std::to_string(sin.sin_port));
 		if (connect(_sock, (__sockaddr*)&sin, sizeof(__sockaddr)) != NET_ERROR)
 		{
-			Log::logSuccessMsg("Successfully connect to server");
+			LogNetwork::logSuccessMsg("Successfully connect to server");
 			_connected = true;
 			return (SUCCESS);
 		}
 		logFailureMsg("Error connection failed ", true);
 	}
-	Log::logFailureMsg("Error all connections failed");
+	LogNetwork::logFailureMsg("Error all connections failed");
 	return (NET_ERROR);
 }
 
@@ -143,9 +143,9 @@ void ClientNetwork::deconnectToServer()
 {
 	char error_code[SIZE_BUFF] = { 0 };
 	__err_size error_code_size = sizeof(error_code);
-	__attribute__((unused))int status;
+    __attribute__((unused))int status;
 
-	Log::logTryMsg("Cleaning server connection...");
+	LogNetwork::logTryMsg("Cleaning server connection...");
 	if (getsockopt(_sock, SOL_SOCKET, SO_ERROR, error_code, &error_code_size) == NET_ERROR)
 	{
 #ifdef _WIN32
@@ -154,12 +154,12 @@ void ClientNetwork::deconnectToServer()
 		else
 			Log::logFailureMsg("Error when closing socket: " + status);
 #elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
-		Log::logFailureMsg("Error when closing socket");
+		LogNetwork::logFailureMsg("Error when closing socket");
 #endif
 	}
 	else
 	{
-		Log::logSuccessMsg("Successfully close socket");
+		LogNetwork::logSuccessMsg("Successfully close socket");
 		__close_socket(_sock);
 	}
 	_connected = false;
@@ -185,16 +185,16 @@ ERR ClientNetwork::readData(std::string &data)
 	}
 	else if (ret < 0)
 	{
-		Log::logFailureMsg("Error failed to read data from socket");
+		LogNetwork::logFailureMsg("Error failed to read data from socket");
 		return (NET_ERROR);
 	}
 	else
 	{
-		Log::logInfoMsg("Received deconnection notification from server");
+		LogNetwork::logInfoMsg("Received deconnection notification from server");
 		deconnectToServer();
 		return (SUCCESS);
 	}
-	Log::logSomething("\nReceived:\n" + data + "\n:From Server\n");
+	LogNetwork::logSomething("\nReceived:\n" + data + "\n:From Server\n");
 	return (SUCCESS);
 }
 
@@ -205,10 +205,10 @@ ERR ClientNetwork::writeData(const std::string &data)
 
 	if ((__write_socket(_sock, dataToSend, size, 0)) == NET_ERROR)
 	{
-		Log::logFailureMsg("\nError failed to write data to socket");
+		LogNetwork::logFailureMsg("\nError failed to write data to socket");
 		return (NET_ERROR);
 	}
-	Log::logSomething("\nSend:\n" + data + "\n:To server\n");
+	LogNetwork::logSomething("\nSend:\n" + data + "\n:To server\n");
 	return (SUCCESS);
 }
 
@@ -232,17 +232,28 @@ void ClientNetwork::clearSocket()
 {
 	FD_ZERO(&_fd_set);
 	FD_SET(_sock, &_fd_set);
-	Log::logSomething("Socket: " + std::to_string(_sock) + " cleared\n");
+	LogNetwork::logSomething("Socket: " + std::to_string(_sock) + " cleared\n");
 }
 
 void ClientNetwork::logFailureMsg(const std::string &msg, __attribute__((unused))bool errorCode)
 {
 #ifdef _WIN32
 	if (errorCode)
-		Log::logFailureMsg(msg + WSAGetLastError());
+		LogNetwork::logFailureMsg(msg + WSAGetLastError());
 	else
-		Log::logFailureMsg(msg);
+		LogNetwork::logFailureMsg(msg);
 #elif __linux__ || __unix__ || __unix || unix || __APPLE__ || __MACH__
-    Log::logFailureMsg(msg);
+	LogNetwork::logFailureMsg(msg);
 #endif
+}
+
+void ClientNetwork::setLogActive(bool log)
+{
+    _logActive = log;
+    LogNetwork::setLogActive(log);
+}
+
+bool ClientNetwork::isLogActive() const
+{
+    return (_logActive);
 }
