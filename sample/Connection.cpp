@@ -8,11 +8,12 @@ Connection::Connection() = default;
 
 Connection::~Connection() = default;
 
-ERR Connection::initClient()
+ERR Connection::initClient(bool log)
 {
     ClientNetwork::t_serverParam srvParam;
 
     srvParam = initConfigurationServer();
+    _network.setLogActive(log);
     if (_network.initNetworkClient(srvParam) == NET_ERROR)
     {
         Log::logFailureMsg("Config error with server at " +
